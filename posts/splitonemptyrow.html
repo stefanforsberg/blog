@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Stefan Forsberg - Things I've learned recently</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/default.min.css" />
+    <style>
+      pre {
+        background: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <h1>Stefan Forsberg</h1>
+
+      <article>
+        <header>
+          <hgroup>
+            <h2>Split on empty row</h2>
+            <h3><i>2023-01-09</i></h3>
+          </hgroup>
+        </header>
+        <p>I recently went through the 2022 version of the advent of code and that's usually a great source of new learnings for me.</p>
+        <p>You typically need to split your input data on new lines but this year the first day had data that looked something like this</p>
+        <pre>
+          <code class="language-plaintext">A
+B
+C
+
+D
+E</code>
+        </pre>
+        <p>where A, B and C where part of one group and D and E another group. I learned that if you split on two new line char(s) you will get one group with A,B,C and one with D,E.</p>
+
+        <pre>
+        <code class="language-csharp">using System;
+          
+input
+  .Split(Environment.NewLine + Environment.NewLine)}
+</code>
+</pre>
+      </article>
+
+      <footer>
+        <hr />
+        <small>Stefan Forsberg blog, using <a href="https://picocss.com/">picocss</a> and <a href="https://highlightjs.org/">highlightjs</a></small>
+      </footer>
+    </main>
+
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>
