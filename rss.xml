@@ -1,0 +1,35 @@
+<rss version="2.0">
+<channel>
+<title>Liftoff News</title>
+<link>https://stefanforsberg.github.io/blog/</link>
+<description>Stefan Forsberg blog</description>
+<language>en-us</language>
+<pubDate>Thu, 12 Jan 2023 16:20:00 +0000</pubDate>
+<lastBuildDate>Thu, 12 Jan 2023 16:20:00 +0000</lastBuildDate>
+<docs>https://stefanforsberg.github.io/blog/</docs>
+<generator>Stefan</generator>
+<managingEditor>editor@example.com</managingEditor>
+<webMaster>webmaster@example.com</webMaster>
+<item>
+<title>Move line in vscode</title>
+<link>https://stefanforsberg.github.io/blog/posts/movelineinvscode.html</link>
+<description>Move line in vscode</description>
+<pubDate>Thu, 12 Jan 2023 16:20:00 +0000</pubDate>
+<guid>https://stefanforsberg.github.io/blog/posts/movelineinvscode.html</guid>
+</item>
+<item>
+<title>Split on empty row</title>
+<link>https://stefanforsberg.github.io/blog/posts/splitonemptyrow.html</link>
+<description>Split on empty row</description>
+<pubDate>Mon, 09 Jan 2023 16:20:00 +0000</pubDate>
+<guid>https://stefanforsberg.github.io/blog/posts/splitonemptyrow.html</guid>
+</item>
+<item>
+<title>Things I've learned recently</title>
+<link>https://stefanforsberg.github.io/blog/posts/thingsivelearnedrecently.html</link>
+<description>Things I've learned recently</description>
+<pubDate>Sun, 08 Jan 2023 16:20:00 +0000</pubDate>
+<guid>https://stefanforsberg.github.io/blog/posts/thingsivelearnedrecently.html</guid>
+</item>
+</channel>
+</rss>
