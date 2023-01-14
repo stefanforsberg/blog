@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Stefan Forsberg - Move line in VSCode</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/default.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://stefanforsberg.github.io/blog/rss.xml" title="Stefan Forsberg Blog rss feed" />
+    <style>
+      pre {
+        background: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <h1>Stefan Forsberg</h1>
+
+      <article>
+        <header>
+          <hgroup>
+            <h2>Reusing JsonSerializerOptions</h2>
+            <h3><i>2023-01-14</i></h3>
+          </hgroup>
+        </header>
+        <p>
+          There is a bit more to the JsonSerializerOptions than just keeping track of the options. Apparently it also keeps a cache of how it should serialize and deserialize the various types you
+          throw at it which can lead to it consuming more of your resources than you'd expect. The following benchmark highlights this.
+        </p>
+
+        <pre>
+<code class="language-csharp">[Benchmark]
+public void DefaultOptions()
+{
+    for (var i = 0; i < 100000; i++)
+    {
+        JsonSerializer.Serialize(thing);
+    }
+}
+
+[Benchmark]
+public void CreatingNewEachTime()
+{
+    for (var i = 0; i < 100000; i++)
+    {
+        JsonSerializer.Serialize(thing, new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase });
+    }
+}
+
+[Benchmark]
+public void CreatingNewAndReusing()
+{
+    var options = new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
+
+    for (var i = 0; i < 100000; i++)
+    {
+        JsonSerializer.Serialize(thing, options);
+    }
+}
+</code>
+</pre>
+
+<pre>
+<code class="language-markdown">|                Method |     Mean |    Error |   StdDev |      Gen0 |     Gen1 |     Gen2 | Allocated |
+|---------------------- |---------:|---------:|---------:|----------:|---------:|---------:|----------:|
+|        DefaultOptions | 20.84 ms | 0.375 ms | 0.417 ms | 1406.2500 |        - |        - |  11.44 MB |
+|   CreatingNewEachTime | 72.94 ms | 1.329 ms | 1.774 ms | 4750.0000 | 250.0000 | 250.0000 |  40.31 MB |
+| CreatingNewAndReusing | 20.64 ms | 0.193 ms | 0.171 ms | 1406.2500 |        - |        - |  11.44 MB |
+</code>
+</pre>
+      </table>
+
+      </article>
+
+      <footer>
+        <hr />
+        <small>Stefan Forsberg blog, using <a href="https://picocss.com/">picocss</a> and <a href="https://highlightjs.org/">highlightjs</a></small>
+      </footer>
+    </main>
+
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>
