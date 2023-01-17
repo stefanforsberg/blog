@@ -4,14 +4,21 @@
 <link>https://stefanforsberg.github.io/blog/</link>
 <description>Stefan Forsberg blog</description>
 <language>en-us</language>
-<pubDate>Thu, 12 Jan 2023 16:20:00 +0000</pubDate>
-<lastBuildDate>Thu, 12 Jan 2023 16:20:00 +0000</lastBuildDate>
+<pubDate>Tue, 17 Jan 2023 16:20:00 +0000</pubDate>
+<lastBuildDate>Tue, 17 Jan 2023 16:20:00 +0000</lastBuildDate>
 <docs>https://stefanforsberg.github.io/blog/</docs>
 <generator>Stefan</generator>
 <managingEditor>editor@example.com</managingEditor>
 <webMaster>webmaster@example.com</webMaster>
 <item>
-<title>Reusing</title>
+<title>My funniest bug</title>
+<link>https://stefanforsberg.github.io/blog/posts/myfunniestbug.html</link>
+<description>Reusing JsonSerializerOptions</description>
+<pubDate>Tue, 17 Jan 2023 16:20:00 +0000</pubDate>
+<guid>https://stefanforsberg.github.io/blog/posts/myfunniestbug.html</guid>
+</item>
+<item>
+<title>Reusing JsonSerializerOptions</title>
 <link>https://stefanforsberg.github.io/blog/posts/reusingjsonserializeroptions.html</link>
 <description>Reusing JsonSerializerOptions</description>
 <pubDate>Sat, 14 Jan 2023 16:20:00 +0000</pubDate>
