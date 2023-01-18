@@ -11,6 +11,13 @@
 <managingEditor>editor@example.com</managingEditor>
 <webMaster>webmaster@example.com</webMaster>
 <item>
+<title>The gift and curse of microservices for trying new things</title>
+<link>https://stefanforsberg.github.io/blog/posts/giftandcurseofmicroservicefortryingthingsout.html</link>
+<description>The gift and curse of microservices for trying new things</description>
+<pubDate>Tue, 18 Jan 2023 16:20:00 +0000</pubDate>
+<guid>https://stefanforsberg.github.io/blog/posts/giftandcurseofmicroservicefortryingthingsout.html</guid>
+</item>
+<item>
 <title>My funniest bug</title>
 <link>https://stefanforsberg.github.io/blog/posts/myfunniestbug.html</link>
 <description>My funniest bug</description>
