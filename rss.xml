@@ -4,12 +4,19 @@
 <link>https://stefanforsberg.github.io/blog/</link>
 <description>Stefan Forsberg blog</description>
 <language>en-us</language>
-<pubDate>Tue, 17 Jan 2023 16:20:00 +0000</pubDate>
-<lastBuildDate>Tue, 17 Jan 2023 16:20:00 +0000</lastBuildDate>
+<pubDate>Sat, 21 Jan 2023 2023 16:20:00 +0000</pubDate>
+<lastBuildDate>Sat, 21 Jan 2023 2023 16:20:00 +0000</lastBuildDate>
 <docs>https://stefanforsberg.github.io/blog/</docs>
 <generator>Stefan</generator>
 <managingEditor>editor@example.com</managingEditor>
 <webMaster>webmaster@example.com</webMaster>
+<item>
+<title>The two modes of garbage collection</title>
+<link>https://stefanforsberg.github.io/blog/posts/thetwomodesofgarbagecollection.html</link>
+<description>The two modes of garbage collection</description>
+<pubDate>Sat, 21 Jan 2023 16:20:00 +0000</pubDate>
+<guid>https://stefanforsberg.github.io/blog/posts/thetwomodesofgarbagecollection.html</guid>
+</item>
 <item>
 <title>The gift and curse of microservices for trying new things</title>
 <link>https://stefanforsberg.github.io/blog/posts/giftandcurseofmicroservicefortryingthingsout.html</link>
