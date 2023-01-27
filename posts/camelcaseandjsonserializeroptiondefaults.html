@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Stefan Forsberg - camelCase and JsonSerializerOptions defaults</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/default.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://stefanforsberg.github.io/blog/rss.xml" title="Stefan Forsberg Blog rss feed" />
+    <style>
+      pre {
+        background: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <h1>Stefan Forsberg</h1>
+
+      <article>
+        <header>
+          <hgroup>
+            <h2>camelCase and JsonSerializerOptions defaults</h2>
+            <h3><i>2023-01-27</i></h3>
+          </hgroup>
+        </header>
+        <p>
+          Let's say you are trying to consume some json api where the properties are given in camel case, for instance <a href="https://jsonplaceholder.typicode.com/posts">https://jsonplaceholder.typicode.com/posts</a>.
+        </p>
+        <p>
+          The default behavior of the deserialize method in System.Text.Json.JsonSerializer is using the <a href="https://learn.microsoft.com/en-us/dotnet/api/system.text.json.jsonserializeroptions.default?view=net-7.0#system-text-json-jsonserializeroptions-default">JsonSerializerOptions.Default</a> setting which requires the case of the object you try to deserialize to match.
+        </p>
+
+        <p>So the following example would not deserialize correctly due to the case of <em>title</em> (in the api) and <em>Title</em> (the property in our class) not matching.</p>
+
+        <pre>
+<code class="language-csharp">var httpClient = new HttpClient();
+var jsonString = await httpClient.GetStringAsync("https://jsonplaceholder.typicode.com/posts");
+
+var posts = JsonSerializer.Deserialize<Post[]>(jsonString);
+
+Console.WriteLine(posts[0].Title);
+
+public class Post
+{
+    public string Title { get; set; }
+}
+</code>
+</pre>
+
+        <p>To fix this you could change the casing of your property </p>
+        <pre><code class="language-csharp">public string title {get;set;}</code></pre> 
+        <p>or create in instance of JsonSerializerOptions that instructs it to ignore case</p>
+        <pre><code class="language-csharp">var posts = JsonSerializer.Deserialize<Post[]>(jsonString, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });</code></pre>
+
+        <h3>JsonSerializerDefaults.Web</h3>
+        <p>As <a href="https://stefanforsberg.github.io/blog/posts/reusingjsonserializeroptions.html">we've seen earlier</a> creating a new JsonSerializerOptions for each time you serialize/deserialize can have negative performance impacts. While you could make sure to re-use the one you create that handles case insensitivity there's a better option that uses sensible defaults for your typical "fetch json from some api" use case.</p>
+
+        <p>If you are in an asp.net context these extension method to the HttpClient are already available, otherwise you can add them by adding the nuget package <mark>System.Net.Http.Json</mark>.</p>
+
+<pre>
+<code class="language-csharp">var httpClient = new HttpClient();
+var posts = await httpClient.GetFromJsonAsync<Post[]>("https://jsonplaceholder.typicode.com/posts");
+</code>
+</pre>        
+
+  <p>The <mark>GetFromJsonAsync</mark> method uses something called <a href="https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/configure-options?pivots=dotnet-7-0#web-defaults-for-jsonserializeroptions">Web defaults for JsonSerializerOptions</a> which, among other things, is set to ignore case differences and all in all offers a very neat api to fetch and deserialize json. Obviously there are a <a href="https://learn.microsoft.com/en-us/dotnet/api/system.net.http.json.httpclientjsonextensions?view=net-7.0">lof of other extension methods</a> that should cover your post/put etc needs as well.</p>
+
+      </article>
+
+      <footer>
+        <hr />
+        <small>Stefan Forsberg blog, using <a href="https://picocss.com/">picocss</a> and <a href="https://highlightjs.org/">highlightjs</a></small>
+      </footer>
+    </main>
+
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>
