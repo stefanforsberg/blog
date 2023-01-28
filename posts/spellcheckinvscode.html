@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Stefan Forsberg - Spell check in VSCode</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/default.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://stefanforsberg.github.io/blog/rss.xml" title="Stefan Forsberg Blog rss feed" />
+    <style>
+      pre {
+        background: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <h1>Stefan Forsberg</h1>
+
+      <article>
+        <header>
+          <hgroup>
+            <h2>Spell check in VSCode</h2>
+            <h3><i>2023-01-28</i></h3>
+          </hgroup>
+        </header>
+        <p>
+          Due to this blog I'm writing a bit more regular texts in vscode I'm reminded of how horrible my spelling is. Luckily there is a nifty extension for that called
+          <a href="https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker">Code spell checker</a>. This also seems to work very well for, which given that it's for
+          VSCode may not be that surprising but still.
+        </p>
+
+        <p>A potential spelling error is highlighted by blue squiggly lines and you can use the normal quick fix shortcut <kbd>ctrl+.</kbd> to change it.</p>
+
+        <img src="../img/spellcheck.gif" />
+      </article>
+
+      <footer>
+        <hr />
+        <small>Stefan Forsberg blog, using <a href="https://picocss.com/">picocss</a> and <a href="https://highlightjs.org/">highlightjs</a></small>
+      </footer>
+    </main>
+
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

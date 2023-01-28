@@ -4,12 +4,19 @@
 <link>https://stefanforsberg.github.io/blog/</link>
 <description>Stefan Forsberg blog</description>
 <language>en-us</language>
-<pubDate>Fri, 27 Jan 2023 2023 16:20:00 +0000</pubDate>
-<lastBuildDate>Fri, 27 Jan 2023 2023 16:20:00 +0000</lastBuildDate>
+<pubDate>Sat, 28 Jan 2023 2023 16:20:00 +0000</pubDate>
+<lastBuildDate>Sat, 28 Jan 2023 2023 16:20:00 +0000</lastBuildDate>
 <docs>https://stefanforsberg.github.io/blog/</docs>
 <generator>Stefan</generator>
 <managingEditor>editor@example.com</managingEditor>
 <webMaster>webmaster@example.com</webMaster>
+<item>
+<title>Spell check in VSCode</title>
+<link>https://stefanforsberg.github.io/blog/posts/spellcheckinvscode.html</link>
+<description>Spell check in VSCode</description>
+<pubDate>Sat, 28 Jan 2023 16:20:00 +0000</pubDate>
+<guid>https://stefanforsberg.github.io/blog/posts/spellcheckinvscode.html</guid>
+</item>
 <item>
 <title>camelCase and JsonSerializerOptions defaults</title>
 <link>https://stefanforsberg.github.io/blog/posts/thetwomodesofgarbagecollection.html</link>
