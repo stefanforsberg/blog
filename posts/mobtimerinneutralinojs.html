@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Stefan Forsberg - MobTimer in neutralinojs</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/default.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://stefanforsberg.github.io/blog/rss.xml" title="Stefan Forsberg Blog rss feed" />
+    <style>
+      pre {
+        background: none;
+      }
+
+      input[type="text"] {
+        background: linear-gradient(135deg, #bafdf7, #fcf4ac, #fbb7f3);
+        animation: animate 2.5s linear infinite;
+      }
+
+      @keyframes animate {
+        100% {
+          filter: hue-rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <h1>Stefan Forsberg</h1>
+
+      <article>
+        <header>
+          <hgroup>
+            <h2>MobTimer in neutralinojs</h2>
+            <h3><i>2023-02-01</i></h3>
+          </hgroup>
+        </header>
+        <p>
+          At a lab day at work one of the task your mov could choice to work on was building a mob timer. I had done that some 8-isch years ago in electron so I took the opportunity to try another
+          cross platform apps kits. After some light googling I settled on <a href="https://neutralino.js.org/">https://neutralino.js.org/</a>.
+        </p>
+
+        <p>
+          It was very simple to start following the guide to <a href="https://neutralino.js.org/docs/getting-started/your-first-neutralinojs-app">build your first app</a>. All in all I really liked
+          the experience and while a lot of things have certainly happened to electron since I last looked the neutralinojs experience was very smooth and I could quite easily accomplish the simple
+          app I set out to do. I felt like the backend API:s (to interact with the os etc) were readily available for me in a way that felt more straight forward compared to electron. Will definitely
+          keep this framework at the back of my head should the need to create cross platform app occur again.
+        </p>
+
+        <p>Ofc I also spent way too long to get some nice rainbow thing going to signal who the active mob user currently is. It would not be lab day without it I guess 🤷‍♂️.</p>
+
+        <input type="text" value="This user is next!" />
+      </article>
+
+      <footer>
+        <hr />
+        <small>Stefan Forsberg blog, using <a href="https://picocss.com/">picocss</a> and <a href="https://highlightjs.org/">highlightjs</a></small>
+      </footer>
+    </main>
+
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>
