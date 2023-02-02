@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Stefan Forsberg - scroll-margin-top and sticky headers</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/default.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://stefanforsberg.github.io/blog/rss.xml" title="Stefan Forsberg Blog rss feed" />
+    <style>
+      pre {
+        background: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <h1>Stefan Forsberg</h1>
+
+      <article>
+        <header>
+          <hgroup>
+            <h2>scroll-margin-top and sticky headers</h2>
+            <h3><i>2023-02-02</i></h3>
+          </hgroup>
+        </header>
+        <p>
+          A page we're working with is quite long so we include anchor links at the top to get to the section that you're interested in. 
+          
+          <pre>
+<code class="language-html">&lt;a href="#someSection">Some section</a>
+&lt;!-- A lot of other things...-->
+&lt;article id="someSection">...&lt;/article></code>
+</pre>
+          
+        <p>
+          The page also includes a sticky header and when going to the anchor link that header is placed on top of the header of the section
+        </p>
+
+        <img src="../img/header01.png" />
+
+        <p>&nbsp;</p>
+
+        <hgroup>
+          <h2>Enter scroll-margin-top</h2>
+          <p>Luckily there's a css property to solve this very thing called <mark>scroll-margin-top</mark> where you can instruct the browser how much space it should leave above your anchor link. For instance:</p>
+        </hgroup>
+
+        <pre>
+          <code class="language-html">&lt;a href="#someSection">Some section</a>
+&lt;!-- A lot of other things...-->
+&lt;article id="someSection" style="scroll-margin-top: 140px;">...&lt;/article></code>
+</pre>        
+
+        <img src="../img/header02.png" />
+
+      </article>
+
+      <footer>
+        <hr />
+        <small>Stefan Forsberg blog, using <a href="https://picocss.com/">picocss</a> and <a href="https://highlightjs.org/">highlightjs</a></small>
+      </footer>
+    </main>
+
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

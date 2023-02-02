@@ -4,12 +4,19 @@
 <link>https://stefanforsberg.github.io/blog/</link>
 <description>Stefan Forsberg blog</description>
 <language>en-us</language>
-<pubDate>Wed, 01 Feb 2023 16:20:00 +0000</pubDate>
-<lastBuildDate>Wed, 01 Feb 2023 16:20:00 +0000</lastBuildDate>
+<pubDate>Thu, 02 Feb 2023 16:20:00 +0000</pubDate>
+<lastBuildDate>Thu, 02 Feb 2023 16:20:00 +0000</lastBuildDate>
 <docs>https://stefanforsberg.github.io/blog/</docs>
 <generator>Stefan</generator>
 <managingEditor>editor@example.com</managingEditor>
 <webMaster>webmaster@example.com</webMaster>
+<item>
+<title>scroll-margin-top and sticky headers</title>
+<link>https://stefanforsberg.github.io/blog/posts/scrollmargintopandstickyheaders.html</link>
+<description>scroll-margin-top and sticky headers</description>
+<pubDate>Thu, 02 Feb 2023 16:20:00 +0000</pubDate>
+<guid>https://stefanforsberg.github.io/blog/posts/scrollmargintopandstickyheaders.html</guid>
+</item>
 <item>
 <title>MobTimer in neutralinojs</title>
 <link>https://stefanforsberg.github.io/blog/posts/mobtimerinneutralinojs.html</link>
