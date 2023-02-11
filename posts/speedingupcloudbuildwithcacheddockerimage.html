@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Stefan Forsberg - Speeding up cloud build with cached docker image</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/default.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://stefanforsberg.github.io/blog/rss.xml" title="Stefan Forsberg Blog rss feed" />
+    <style>
+      pre {
+        background: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <h1>Stefan Forsberg</h1>
+
+      <article>
+        <header>
+          <hgroup>
+            <h2>Speeding up cloud build with cached docker image</h2>
+            <h3><i>2023-02-11</i></h3>
+          </hgroup>
+        </header>
+        <p>
+          I really don't miss having to keep a CI machine up and running so all in all I like the move to cloud build. One thing that's noticeable worse compared your dedicated CI instance is that it
+          can not utilize the caching mechanism for docker builds. As you can imagine this has a very negative impact on your build times. Luckily you can at least partly mitigate this by instructing
+          docker which image it can used as a cache.
+        </p>
+        <p>To process itself consists of the following steps</p>
+        <ul>
+          <li>Pull the docker image your built last time (tagged latest)</li>
+          <li>Build your new image using the image pulled above as the cache</li>
+          <li>Push your image to your repository</li>
+        </ul>
+
+        <pre>
+          <code class="language-yaml">- id: "pull latest image"
+  name: "gcr.io/cloud-builders/docker"
+  entrypoint: "bash"
+  args:
+  [
+    "-c",
+    "docker pull somereponame.pkg.dev/path/to/yourcontainer:latest || exit 0",
+  ]
+  # exit 0 handles first build failure because latest tag doe not exist yet
+
+- id: build-image
+  name: "gcr.io/cloud-builders/docker"
+  args:
+  [
+    "build",
+    "-t",
+    "somereponame.pkg.dev/path/to/yourcontainer:$BUILD_ID",
+    "-t",
+    "somereponame.pkg.dev/path/to/yourcontainer:latest",
+    "--cache-from",
+    "somereponame.pkg.dev/path/to/yourcontainer:latest", # use previously built container as cache
+    ".",
+  ]
+
+- id: push-image
+  name: "gcr.io/cloud-builders/docker"
+  args:
+    [
+      "push",
+      "--all-tags", # pushes both the $BUILD_ID and latest to the repository
+      "somereponame.pkg.dev/path/to/yourcontainer",
+    ]  
+
+</code>
+        </pre>
+
+        <p>This does not solve all the issues with missing docker cache layers but it helped shaved off roughly 1 and a half minute on our build times.</p>
+      </article>
+
+      <footer>
+        <hr />
+        <small>Stefan Forsberg blog, using <a href="https://picocss.com/">picocss</a> and <a href="https://highlightjs.org/">highlightjs</a></small>
+      </footer>
+    </main>
+
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>
