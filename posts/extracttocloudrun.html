@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Stefan Forsberg - Extract to Cloud Run</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/default.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://stefanforsberg.github.io/blog/rss.xml" title="Stefan Forsberg Blog rss feed" />
+    <style>
+      pre {
+        background: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <h1>Stefan Forsberg</h1>
+
+      <article>
+        <header>
+          <hgroup>
+            <h2>Extract to Cloud Run</h2>
+            <h3><i>2023-02-18</i></h3>
+          </hgroup>
+        </header>
+        <p>
+          Back in resharper days there was a refactoring method called "extract to method". I recently realized that a quite common pattern I'm using today could be labeled "extract to cloud run".
+        </p>
+        <p>
+          The context is that you have some form of long running app running in your k8s cluster. Certain operations in the app have a much higher demand on the computer resources (memory and/or cpu)
+          that are not needed when that operation isn't running. What we typically do in situations like these is moving that operation to cloud run. The cloud run can be beefed up as needed and the
+          long running app can have it's resources turned down to the minimum it needs to operate.
+        </p>
+        <p>
+          All in all this leads to happier k8s orchestration and you can beef up the cloud run get the computer resource intense operation to complete quickly and only pay the high resource price when
+          needed.
+        </p>
+      </article>
+
+      <footer>
+        <hr />
+        <small>Stefan Forsberg blog, using <a href="https://picocss.com/">picocss</a> and <a href="https://highlightjs.org/">highlightjs</a></small>
+      </footer>
+    </main>
+
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>
