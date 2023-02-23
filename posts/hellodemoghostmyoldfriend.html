@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Stefan Forsberg - Hello demo ghost my old friend</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/default.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://stefanforsberg.github.io/blog/rss.xml" title="Stefan Forsberg Blog rss feed" />
+    <style>
+      pre {
+        background: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <h1>Stefan Forsberg</h1>
+
+      <article>
+        <header>
+          <hgroup>
+            <h2>Hello demo ghost my old friend</h2>
+            <h3><i>2023-02-23</i></h3>
+          </hgroup>
+        </header>
+        <p>
+          The demo ghost is that thing that causes a system to surprise you with all kind of unexpected behavior. This ghost seems to have a high tendency to decide to reveal itself when you're doing
+          a demo, the bigger the demo the better (says the ghost).
+        </p>
+        <p>I've been fairly spared recently, maybe because the things I've developing for the past couple of years have been more internal systems with a very limited exposure to actual people.</p>
+        <p>
+          This week we had a relative big demo showcasing a system we've been working on. We had done a bunch of smaller demos beforehand so it felt like it was pretty much under control. As the
+          person who held the introduction started to near the end of their slides and hand over to me I noticed that the CDN we use for a css library seems to suffer from degraded performance which
+          causes our site to be very slow. Luckily enough it sorted itself out just as I started to demo so I thought I'd dodged a bullet.
+        </p>
+        <p>
+          The demo ghost had manage to lull me into a false sense of security because apparently they had planned to take down an external service we rely on. That API went down and that's also when
+          it became very apparent that our user experience for when an error occurs was not great, not great at all. Luckily we had somewhat of a continuous plan so we were able to showcase what would
+          have happened if the system had been available and with a small bump in the road we were able to complete demoing the full functionality.
+        </p>
+        <p>So bye for now demo ghost, hope we don't meet each other again too soon 👋 👻</p>
+      </article>
+
+      <footer>
+        <hr />
+        <small>Stefan Forsberg blog, using <a href="https://picocss.com/">picocss</a> and <a href="https://highlightjs.org/">highlightjs</a></small>
+      </footer>
+    </main>
+
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>
