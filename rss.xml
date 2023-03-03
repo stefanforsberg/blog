@@ -4,12 +4,19 @@
 <link>https://stefanforsberg.github.io/blog/</link>
 <description>Stefan Forsberg blog</description>
 <language>en-us</language>
-<pubDate>Thu, 23 Feb 2023 16:20:00 +0000</pubDate>
-<lastBuildDate>Thu, 23 Feb 2023 16:20:00 +0000</lastBuildDate>
+<pubDate>Fri, 03 Mar 2023 16:20:00 +0000</pubDate>
+<lastBuildDate>Fri, 03 Mar 2023 16:20:00 +0000</lastBuildDate>
 <docs>https://stefanforsberg.github.io/blog/</docs>
 <generator>Stefan</generator>
 <managingEditor>editor@example.com</managingEditor>
 <webMaster>webmaster@example.com</webMaster>
+<item>
+<title>Meeting opposite Stefan in the semle queue</title>
+<link>https://stefanforsberg.github.io/blog/posts/meetingoppositestefaninthesemlequeue.html</link>
+<description>Meeting opposite Stefan in the semle queue</description>
+<pubDate>Fri, 03 Mar 2023 16:20:00 +0000</pubDate>
+<guid>https://stefanforsberg.github.io/blog/posts/meetingoppositestefaninthesemlequeue.html</guid>
+</item>
 <item>
 <title>Hello demo ghost my old friend</title>
 <link>https://stefanforsberg.github.io/blog/posts/hellodemoghostmyoldfriend.html</link>
