@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Stefan Forsberg - Numbering with CSS Counters</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/default.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://stefanforsberg.github.io/blog/rss.xml" title="Stefan Forsberg Blog rss feed" />
+    <style>
+      pre {
+        background: none;
+      }
+
+      .steps {
+        counter-reset: stepsCounter;
+      }
+
+      .steps div::before {
+        counter-increment: stepsCounter;
+        content: "🦶 " counter(stepsCounter) ": ";
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <h1>Stefan Forsberg</h1>
+
+      <article>
+        <header>
+          <hgroup>
+            <h2>Numbering with CSS Counters</h2>
+            <h3><i>2023-03-04</i></h3>
+          </hgroup>
+        </header>
+        <p>I had a list with a number of steps needed in a pipeline I wanted to visualize to the user the steps involved.</p>
+
+        <pre>
+<code class="language-html">&lt;div>
+  &lt;div>1: Do thing&lt;/div>
+  &lt;div>2: Next thing&lt;/div>
+  &lt;div>3: Last thing&lt;/div>
+&lt;/div>
+</code>
+</pre>
+
+        <p>You can utilize css counters if you want to keep the numbering part away from your markup (so similar to an ordered list)</p>
+
+        <pre>
+<code class="language-css">.steps {
+  counter-reset: stepsCounter;
+}
+
+.steps div::before {
+  counter-increment: stepsCounter;
+  content: "🦶 " counter(stepsCounter) ": ";
+}
+</code>
+</pre>
+
+        <pre>
+<code class="language-html">&lt;div class="steps">
+  &lt;div>Do thing&lt;/div>
+  &lt;div>Next thing&lt;/div>
+  &lt;div>Last thing&lt;/div>
+&lt;/div>
+</code>
+</pre>
+
+        <p>The code above will result in the following 👇</p>
+
+        <div class="steps">
+          <div>Do thing</div>
+          <div>Next thing</div>
+          <div>Last thing</div>
+        </div>
+      </article>
+
+      <footer>
+        <hr />
+        <small>Stefan Forsberg blog, using <a href="https://picocss.com/">picocss</a> and <a href="https://highlightjs.org/">highlightjs</a></small>
+      </footer>
+    </main>
+
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>
