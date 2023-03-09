@@ -4,12 +4,19 @@
 <link>https://stefanforsberg.github.io/blog/</link>
 <description>Stefan Forsberg blog</description>
 <language>en-us</language>
-<pubDate>Sat, 04 Mar 2023 16:20:00 +0000</pubDate>
-<lastBuildDate>Sat, 04 Mar 2023 16:20:00 +0000</lastBuildDate>
+<pubDate>Thu, 09 Mar 2023 16:20:00 +0000</pubDate>
+<lastBuildDate>Thu, 09 Mar 2023 16:20:00 +0000</lastBuildDate>
 <docs>https://stefanforsberg.github.io/blog/</docs>
 <generator>Stefan</generator>
 <managingEditor>editor@example.com</managingEditor>
 <webMaster>webmaster@example.com</webMaster>
+<item>
+<title>The naive approach</title>
+<link>https://stefanforsberg.github.io/blog/posts/thenaiveapproach.html</link>
+<description>The naive approach</description>
+<pubDate>Thu, 09 Mar 2023 16:20:00 +0000</pubDate>
+<guid>https://stefanforsberg.github.io/blog/posts/thenaiveapproach.html</guid>
+</item>
 <item>
 <title>Numbering with CSS Counters</title>
 <link>https://stefanforsberg.github.io/blog/posts/numberingwithcsscounters.html</link>
