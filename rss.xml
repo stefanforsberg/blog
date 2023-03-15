@@ -4,16 +4,23 @@
 <link>https://stefanforsberg.github.io/blog/</link>
 <description>Stefan Forsberg blog</description>
 <language>en-us</language>
-<pubDate>Fri, 10 Mar 2023 16:20:00 +0000</pubDate>
-<lastBuildDate>Fri, 10 Mar 2023 16:20:00 +0000</lastBuildDate>
+<pubDate>Thu, 15 Mar 2023 16:20:00 +0000</pubDate>
+<lastBuildDate>Thu, 15 Mar 2023 16:20:00 +0000</lastBuildDate>
 <docs>https://stefanforsberg.github.io/blog/</docs>
 <generator>Stefan</generator>
 <managingEditor>editor@example.com</managingEditor>
 <webMaster>webmaster@example.com</webMaster>
 <item>
+<title>ToString of a c# record</title>
+<link>https://stefanforsberg.github.io/blog/posts/tostringofcsharprecord.html</link>
+<description>ToString of a c# record</description>
+<pubDate>Thu, 15 Mar 2023 16:20:00 +0000</pubDate>
+<guid>https://stefanforsberg.github.io/blog/posts/tostringofcsharprecord.html</guid>
+</item>
+<item>
 <title>Javascript array at</title>
 <link>https://stefanforsberg.github.io/blog/posts/javascriptarrayat.html</link>
-<description>The naive approach</description>
+<description>Javascript array at</description>
 <pubDate>Fri, 10 Mar 2023 16:20:00 +0000</pubDate>
 <guid>https://stefanforsberg.github.io/blog/posts/javascriptarrayat.html</guid>
 </item>
