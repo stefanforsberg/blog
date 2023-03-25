@@ -4,12 +4,26 @@
 <link>https://stefanforsberg.github.io/blog/</link>
 <description>Stefan Forsberg blog</description>
 <language>en-us</language>
-<pubDate>Thu, 15 Mar 2023 16:20:00 +0000</pubDate>
-<lastBuildDate>Thu, 15 Mar 2023 16:20:00 +0000</lastBuildDate>
+<pubDate>Sat, 25 Mar 2023 16:20:00 +0000</pubDate>
+<lastBuildDate>Sat, 25 Mar 2023 16:20:00 +0000</lastBuildDate>
 <docs>https://stefanforsberg.github.io/blog/</docs>
 <generator>Stefan</generator>
 <managingEditor>editor@example.com</managingEditor>
 <webMaster>webmaster@example.com</webMaster>
+<item>
+<title>Spelsylt8 game jam</title>
+<link>https://stefanforsberg.github.io/blog/posts/spelsylt8gamejam.html</link>
+<description>Working from home</description>
+<pubDate>Sat, 25 Mar 2023 16:20:00 +0000</pubDate>
+<guid>https://stefanforsberg.github.io/blog/posts/spelsylt8gamejam.html</guid>
+</item>
+<item>
+<title>Working from home</title>
+<link>https://stefanforsberg.github.io/blog/posts/workingfromhome.html</link>
+<description>Working from home</description>
+<pubDate>Fri, 17 Mar 2023 16:20:00 +0000</pubDate>
+<guid>https://stefanforsberg.github.io/blog/posts/workingfromhome.html</guid>
+</item>
 <item>
 <title>ToString of a c# record</title>
 <link>https://stefanforsberg.github.io/blog/posts/tostringofcsharprecord.html</link>
