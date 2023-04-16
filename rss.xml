@@ -4,12 +4,26 @@
 <link>https://stefanforsberg.github.io/blog/</link>
 <description>Stefan Forsberg blog</description>
 <language>en-us</language>
-<pubDate>Tue, 28 Mar 2023 16:20:00 +0000</pubDate>
-<lastBuildDate>Tue, 28 Mar 2023 16:20:00 +0000</lastBuildDate>
+<pubDate>Sun, 16 Apr 2023 16:20:00 +0000</pubDate>
+<lastBuildDate>Sun, 16 Apr 2023 16:20:00 +0000</lastBuildDate>
 <docs>https://stefanforsberg.github.io/blog/</docs>
 <generator>Stefan</generator>
 <managingEditor>editor@example.com</managingEditor>
 <webMaster>webmaster@example.com</webMaster>
+<item>
+<title>Solo developer efficiency</title>
+<link>https://stefanforsberg.github.io/blog/posts/solodeveloperefficiency.html</link>
+<description>Solo developer efficiency</description>
+<pubDate>Sun, 16 Apr 2023 16:20:00 +0000</pubDate>
+<guid>https://stefanforsberg.github.io/blog/posts/solodeveloperefficiency.html</guid>
+</item>
+<item>
+<title>Spelsylt8 game jam thoughts</title>
+<link>https://stefanforsberg.github.io/blog/posts/spelsylt8gamejamthoughts.html</link>
+<description>Spelsylt8 game jam thoughts</description>
+<pubDate>Tue, 11 Apr 2023 16:20:00 +0000</pubDate>
+<guid>https://stefanforsberg.github.io/blog/posts/spelsylt8gamejamthoughts.html</guid>
+</item>
 <item>
 <title>It might be time to call it a day</title>
 <link>https://stefanforsberg.github.io/blog/posts/itmightbetimetocallitaday.html</link>
