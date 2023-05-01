@@ -4,12 +4,19 @@
 <link>https://stefanforsberg.github.io/blog/</link>
 <description>Stefan Forsberg blog</description>
 <language>en-us</language>
-<pubDate>Sun, 16 Apr 2023 16:20:00 +0000</pubDate>
-<lastBuildDate>Sun, 16 Apr 2023 16:20:00 +0000</lastBuildDate>
+<pubDate>Mon, 1 May 2023 16:20:00 +0000</pubDate>
+<lastBuildDate>Mon, 1 May 2023 16:20:00 +0000</lastBuildDate>
 <docs>https://stefanforsberg.github.io/blog/</docs>
 <generator>Stefan</generator>
 <managingEditor>editor@example.com</managingEditor>
 <webMaster>webmaster@example.com</webMaster>
+<item>
+<title>Maintenance</title>
+<link>https://stefanforsberg.github.io/blog/posts/solodeveloperefficiency.html</link>
+<description>Maintenance</description>
+<pubDate>Mon, 1 May 2023 16:20:00 +0000</pubDate>
+<guid>https://stefanforsberg.github.io/blog/posts/solodeveloperefficiency.html</guid>
+</item>
 <item>
 <title>Solo developer efficiency</title>
 <link>https://stefanforsberg.github.io/blog/posts/solodeveloperefficiency.html</link>
